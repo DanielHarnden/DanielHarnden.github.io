@@ -1,0 +1,214 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-back: #071140;
+    --main-back-dark: #040A25;
+    --main-text: #EEF0F2;
+    --main-header: #F2B592;
+    --main-outline: #B4A8C7;
+    --link-hover: #E98449;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #ccc;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* Header things */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 75px;
+    top: 0;
+    margin: 0px 80px;
+}
+
+header a {
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+ol {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+ol a::before {
+    margin-right: 10px;
+    content: "0" counter(item) ".";
+    color: var(--link-hover);
+}
+
+ol li {
+    padding: 0;
+    margin: 0px 5px;
+    counter-increment: item 1;
+}
+
+
+
+/* Body things*/
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--main-back);
+    color: var(--main-text);
+}
+
+main {
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+h1 {
+    font-size: 64px;
+    color: var(--main-header);
+    line-height: 1.1em;
+    margin: 18px 0px;
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--main-text);
+    line-height: 1.1em;
+    margin: 18px 0px;
+}
+
+div.fadeDiv {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+div.fadeDiv.fadeIn {
+    opacity: 1;
+}
+
+div.fadeDiv.fadeOut {
+    opacity: 0;
+}
+
+div.intro {
+    text-align: left;
+    padding-top: 150px;
+    min-height: 100vh;
+}
+
+div.left {
+    text-align: left;
+    border-top: 2px solid;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--main-back), var(--main-outline) 15%, var(--main-outline) 85%, var(--main-back));
+    padding: 25px 0px 75px 0px;
+    min-height: 100vh;
+}
+
+div.right {
+    text-align: right;
+    border-top: 2px solid;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--main-back), var(--main-outline) 15%, var(--main-outline) 85%, var(--main-back));
+    padding: 25px 0px 75px 0px;
+    min-height: 100vh;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+a {
+    color: var(--main-text);
+    transition: color 0.25s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a.clicked {
+    color: var(--main-text);
+}
+
+
+
+/* Side things */
+ul.socials {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    list-style: none;
+}
+
+ul.socials::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 150px;
+    margin: 0px auto;
+    background-color: var(--main-outline);
+}
+
+a.email {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    margin: 5px auto;
+    padding: 10px 8px;
+    text-decoration: none;
+}
+
+div.email {
+    width: 40px;
+    position: fixed;
+    top: 0px;
+    left: auto;
+    right: 40px;
+    list-style: none;
+}
+
+div.email::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 150px;
+    margin: 0px auto;
+    background-color: var(--main-outline);
+}
+
+
+
+/* Footer things */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    bottom: 0px;
+}

@@ -1,123 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <style>
-    /* Define the color scheme */
-    :root {
-      --primary-color: #20264F;
-      --secondary-color: #4F2984;
-      --accent-color-1: #FFFFFF;
-      --accent-color-2: #A9A9A9;
-      --accent-color-3: #FFB6C1;
-    }
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Daniel Harnden Portfolio</title>
+        <meta name="description" content="Daniel Harnden's portfolia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="base.js" type="text/javascript" defer></script>
+    </head>
+
+    <body>
+      
+        <header>
+            <ol>
+                <li><a href="#dataPrometheus">Data Prometheus</a></li>
+                <li><a href="#rttcf">Real-Time Train Crowding Forecasting</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#lit">Literature</a></li>
+            </ol>
+        </header>
+
+        <socials-component></socials-component>
+        <email-component></email-component>
+
+
+
+    <main>
+        <div class="intro fadeDiv">
+            <h2>Hey, my name is</h2> 
+            <h1>Daniel Harnden.</h1>
+            <p>I'm an aspiring software engineer with a Bachelor's degree in Computer Science with a concentration in Data Science from Tennessee Technological University.</p>
+            <br><br><br>
+            <h2>website currently under construction :(</h2>
+        </div>
+
+
+        <div class="left fadeDiv" id="dataPrometheus">
+            <h1>Data Prometheus</h1>
+            <p>My capstone project, Data Prometheus is an automatic database merging tool that combines multiple minor databases into a singular primary database and returns a schema image of the new database.</p>
+        </div>
+
+
+
+        <div class="right fadeDiv" id="rttcf">
+            <h1>Real-Time Train Crowding Forecast</h1>
+            <p>A project for my Advanced Data Science class, Real-Time Train Crowding Forecasting uses historical data provided by SNCR-Transilien, a French transit company, to predict a given train's crowding factor, which is defined as the ratio of pasengers on a train relative to its total possible capacity. Our supervised machine learning algorithm uses the crowding factor of previous trains at the current station and the crowding factor of the current train at previous stations to predict train occupancy rates in real time.</p>
+            <p>My group's research was presented at <a href="https://www.tntech.edu/research/research-day.php" target="_blank" rel="noreferrer">Tennessee Technological University's 2023 Research and Creative Inquiry Day</a>, and our code can be found <a href="https://github.com/BlueMonkeyQ/Train-Forcasting" target="_blank" rel="noreferrer">here</a>.</p>
+        </div>
+
+
+
+        <div class="left fadeDiv" id="games">
+            <h1>Games</h1>
+            <p>I like to make games in my free time using <a href="https://unity.com/" target="_blank" rel="noreferrer">Unity</a> and C#. Many of my game demos are either unfinished or under construction spanning various genres including 2D platformers, point and click visual novels, and first person shooters.</p>
+            <p>One of my public demos is <a href="https://danielharnden.github.io/ClippyCommando/index.html" target="_blank" rel="noreferrer">Clippy Commando</a>, a twin stick shooter made for itch.io's <a href="https://itch.io/jam/jame-gam-18/entries" target="_blank" rel="noreferrer">"Jame Gam #18"</a> game jam.</p>
+        </div>
+
+
+
+        <div class="right fadeDiv" id ="lit">
+            <h1>Literature</h1>
+            <p>I also like to do creative writing in my free time. The only story that I've made public (so far) is <a href="https://beantimes.github.io" target="_blank" rel="noreferrer">Memories of the Bean Times</a>, a story about monsters made of baked beans attacking medieval Europe. It's around 100,000 words and still ongoing. To make the story public, I created a website using HTML, CSS, and JavaScript, and am hosting it using GitHub Pages. You can find the source code <a href="https://github.com/BeanTimes/BeanTimes.github.io" target="_blank" rel="noreferrer">here</a>.</p>
+        </div>
+
+    </main>
     
-    /* Set global styles */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: var(--accent-color-1);
-      background-color: var(--primary-color);
-    }
-    
-    a {
-      color: var(--accent-color-1);
-      text-decoration: none;
-    }
-    
-    /* Style the header */
-    header {
-      background-color: var(--secondary-color);
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    #logo {
-      font-size: 32px;
-      font-weight: bold;
-      color: var(--accent-color-1);
-      text-decoration: none;
-    }
-    
-    nav {
-      display: flex;
-    }
-    
-    nav a {
-      padding: 10px;
-      margin-right: 10px;
-      border-radius: 5px;
-      background-color: var(--accent-color-3);
-      transition: background-color 0.3s ease;
-    }
-    
-    nav a:hover {
-      background-color: var(--accent-color-2);
-    }
-    
-    /* Style the main content */
-    main {
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    .card {
-      width: 30%;
-      margin-bottom: 30px;
-      background-color: var(--accent-color-1);
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
-    
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 5px 5px 0 0;
-    }
-    
-    .card h2 {
-      font-size: 24px;
-      margin: 10px;
-    }
-    
-    .card p {
-      margin: 10px;
-      font-size: 18px;
-    }
-    
-    /* Style the footer */
-    footer {
-      background-color: var(--secondary-color);
-      padding: 20px;
-      text-align: center;
-    }
-    
-    footer p {
-      margin: 0;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="#" id="logo">My Portfolio</a>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-  
-  <main>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200.png?text=Project+1" alt="Project 1">
-      <h2>Project 1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque quam quis nisi eleifend, id
+    <footer>
+        <p>Designed and Built by Daniel Harnden</p>
+    </footer>
+
+    </body>
+</html>
