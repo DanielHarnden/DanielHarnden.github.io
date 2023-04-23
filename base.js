@@ -46,8 +46,26 @@ class emailComponent extends HTMLElement {
     }
 }
 
+
+
+class returnComponent extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        const to = this.getAttribute('to');
+        this.innerHTML = `
+        <div class="return">
+            <a class="return" href="https://danielharnden.github.io#${to}">Return to Main Page</a>
+        </div>
+        `;
+    }
+}
+
 customElements.define('email-component', emailComponent);
 customElements.define('socials-component', socialsComponent);
+customElements.define('return-component', returnComponent);
 
 
 
@@ -55,18 +73,21 @@ const divs = document.getElementsByClassName('fadeDiv');
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
   
-    // Check if the element is within the viewport boundaries
-    const topVisible = rect.top <= windowHeight && rect.top >= 0;
-    const bottomVisible = rect.bottom <= windowHeight && rect.bottom >= 0;
-    const leftVisible = rect.left <= windowWidth && rect.left >= 0;
-    const rightVisible = rect.right <= windowWidth && rect.right >= 0;
+    // Calculate the full height of the element
+    const elementHeight = Math.max(element.offsetHeight, element.scrollHeight);
   
-    // Return true if any part of the element is visible within the viewport
-    return (topVisible || bottomVisible) && (leftVisible || rightVisible);
-}
+    // Check if the element is fully within the viewport boundaries
+    const topVisible = rect.top >= 0 && rect.top + elementHeight <= windowHeight;
+    const bottomVisible = rect.bottom >= 0 && rect.bottom - elementHeight <= windowHeight;
+    const leftVisible = rect.left >= 0 && rect.left + element.offsetWidth <= windowWidth;
+    const rightVisible = rect.right >= 0 && rect.right - element.offsetWidth <= windowWidth;
+  
+    // Return true if the element is fully visible within the viewport
+    return (topVisible || bottomVisible) && leftVisible && rightVisible;
+  }
 
 function fadeInOnScroll() {
     for (let i = 0; i < divs.length; i++) {

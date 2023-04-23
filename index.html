@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Daniel Harnden Portfolio</title>
-        <meta name="description" content="Daniel Harnden's portfolia">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
 
-        <script src="base.js" type="text/javascript" defer></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Daniel Harnden Portfolio</title>
+    <meta name="description" content="Daniel Harnden's Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-    <body>
-      
-        <header>
-            <ol>
-                <li><a href="#dataPrometheus">Data Prometheus</a></li>
-                <li><a href="#rttcf">Real-Time Train Crowding Forecasting</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#lit">Literature</a></li>
-            </ol>
-        </header>
+    <script src="base.js" type="text/javascript" defer></script>
+</head>
 
-        <socials-component></socials-component>
-        <email-component></email-component>
+<body>
+
+    <header>
+        <ol>
+            <li><a href="#dataPrometheus">Data Prometheus</a></li>
+            <li><a href="#rttcf">Real-Time Train Crowding Forecasting</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#lit">Literature</a></li>
+        </ol>
+    </header>
+
+    <socials-component></socials-component>
+    <email-component></email-component>
 
 
 
     <main>
         <div class="intro fadeDiv">
-            <h2>Hey, my name is</h2> 
+            <!--<div class="portfolio-img-holder"><div class="portfolio-img"></div></div>-->
+            <h2>Hey, my name is</h2>
             <h1>Daniel Harnden.</h1>
             <p>I'm an aspiring software engineer with a Bachelor's degree in Computer Science with a concentration in Data Science from Tennessee Technological University.</p>
+
+
+
             <br><br><br>
             <h2>website currently under construction :(</h2>
         </div>
@@ -39,6 +44,12 @@
         <div class="left fadeDiv" id="dataPrometheus">
             <h1>Data Prometheus</h1>
             <p>My capstone project, Data Prometheus is an automatic database merging tool that combines multiple minor databases into a singular primary database and returns a schema image of the new database.</p>
+            <p>Below is a very simplified example of a database being joined. The first image is the database pre-processing. Even though the tables share three keys, they have no foreign key relationships.</p>
+            <img src="img/tinyMoonbuggy.sqlite.png" alt="A database pre-processing.">
+            <h2 class="center">↓</h2>
+            <img src="img/tinyMoonbuggy_updated.db.png" alt="A database post-processing.">
+            <br>
+            <p>Post-processing, the RecordKey key in the past_volunteers table is identified as a foreign key of RecordKey in moonbuggy_users. More examples of Data Prometheus processing be found <a href="dataPrometheus.html" rel="noreferrer">here</a>.</p>
         </div>
 
 
@@ -46,7 +57,8 @@
         <div class="right fadeDiv" id="rttcf">
             <h1>Real-Time Train Crowding Forecast</h1>
             <p>A project for my Advanced Data Science class, Real-Time Train Crowding Forecasting uses historical data provided by SNCR-Transilien, a French transit company, to predict a given train's crowding factor, which is defined as the ratio of pasengers on a train relative to its total possible capacity. Our supervised machine learning algorithm uses the crowding factor of previous trains at the current station and the crowding factor of the current train at previous stations to predict train occupancy rates in real time.</p>
-            <p>My group's research was presented at <a href="https://www.tntech.edu/research/research-day.php" target="_blank" rel="noreferrer">Tennessee Technological University's 2023 Research and Creative Inquiry Day</a>, and our code can be found <a href="https://github.com/BlueMonkeyQ/Train-Forcasting" target="_blank" rel="noreferrer">here</a>.</p>
+            <p>My group's research was presented at <a href="https://www.tntech.edu/research/research-day.php" target="_blank" rel="noreferrer">Tennessee Technological University's 2023 Research and Creative Inquiry Day</a>, and our code can be found <a href="https://github.com/BlueMonkeyQ/Train-Forcasting" target="_blank" rel="noreferrer">here</a>. The poster we presented at Research Day is below (click to view a larger version).</p>
+            <a href="img/rttcfPoster.png" target="_blank"><img src="img/rttcfPoster.png" alt="Real-Time Train Crowding Forecasting Research Day Poster."></a>
         </div>
 
 
@@ -54,21 +66,22 @@
         <div class="left fadeDiv" id="games">
             <h1>Games</h1>
             <p>I like to make games in my free time using <a href="https://unity.com/" target="_blank" rel="noreferrer">Unity</a> and C#. Many of my game demos are either unfinished or under construction spanning various genres including 2D platformers, point and click visual novels, and first person shooters.</p>
-            <p>One of my public demos is <a href="https://danielharnden.github.io/ClippyCommando/index.html" target="_blank" rel="noreferrer">Clippy Commando</a>, a twin stick shooter made for itch.io's <a href="https://itch.io/jam/jame-gam-18/entries" target="_blank" rel="noreferrer">"Jame Gam #18"</a> game jam.</p>
+            <p>One of my public demos is <a href="https://danielharnden.github.io/ClippyCommando/index.html" target="_blank" rel="noreferrer">Clippy Commando</a>, a twin stick shooter made for itch.io's <a href="https://itch.io/jam/jame-gam-18/entries" target="_blank" rel="noreferrer">"Jame Gam #18"</a> game jam. You can view the source code <a href="https://github.com/DanielHarnden/ClippyCommando" target="_blank" rel="noreferrer">here</a>.</p>
         </div>
 
 
 
-        <div class="right fadeDiv" id ="lit">
+        <div class="right fadeDiv" id="lit">
             <h1>Literature</h1>
-            <p>I also like to do creative writing in my free time. The only story that I've made public (so far) is <a href="https://beantimes.github.io" target="_blank" rel="noreferrer">Memories of the Bean Times</a>, a story about monsters made of baked beans attacking medieval Europe. It's around 100,000 words and still ongoing. To make the story public, I created a website using HTML, CSS, and JavaScript, and am hosting it using GitHub Pages. You can find the source code <a href="https://github.com/BeanTimes/BeanTimes.github.io" target="_blank" rel="noreferrer">here</a>.</p>
+            <p>I also like to do creative writing in my free time. The only public story right now is <a href="https://beantimes.github.io" target="_blank" rel="noreferrer">Memories of the Bean Times</a>, a story about monsters made of baked beans attacking medieval Europe. It's around 100,000 words and still ongoing. To make the story public, I created a website using HTML, CSS, and JavaScript, and am hosting it using GitHub Pages. You can find the source code <a href="https://github.com/BeanTimes/BeanTimes.github.io" target="_blank" rel="noreferrer">here</a>.</p>
         </div>
 
     </main>
-    
+
     <footer>
         <p>Designed and Built by Daniel Harnden</p>
     </footer>
 
-    </body>
+</body>
+
 </html>
