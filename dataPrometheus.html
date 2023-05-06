@@ -21,25 +21,25 @@
             <h1 class="center">Further Examples of Data Prometheus</h1>
 
             <div class="left fadeDiv">
-                <p>This example is a slightly larger version of the example from my portfolio's main page. This shows the ability of Data Prometheus to determine relationships between multiple different tables, as well as more clearly showing the moonbuggy_users table as the source that the other RecordKey keys are referencing.</p>
-                <img src="img/smallMoonbuggy.sqlite.png" alt="A database pre-processing.">
-                <h2 class="center">↓</h2>
-                <img src="img/smallMoonbuggy_updated.db.png" alt="A database post-processing.">
-            </div>
-
-            <div class="left fadeDiv">
-                <p>This is an example of Data Prometheus attempting to re-map a database that already has relationships. Due to the project being a student capstone project, we were unable to fully develop Data Prometheus to our liking. Though it is able to find a large number of relationships present in the data, it is unable to properly map them due to ambiguity, as well as finding completely incorrect relationships.</p>
-                <p>Data Prometheus currently only thrives in environments where keys are identically named and table structure has a clear hierarchy.</p>
+                <p>This is an example of Data Prometheus attempting to re-map a database that already has relationships. The first image was generated using <a href="https://www.schemacrawler.com/" target="_blank">SchemaCrawler</a>, a database mapping tool that was used during the capstone phase of the project. After I began expanding Data Prometheus, I decided to move away from using SchemaCrawler to generate graph images.</p>
+                <p>Even at this basic stage, Data Prometheus is able to programatically and correctly identify 9 out of 11 relationships in chinook.db. Despite incorrectly identifying two relationships (Customers/SupportRepId -> Employees/EmployeeId and Employees/ReportsTo -> Employees/EmployeeId), the table structure is identical to a database with predefined relationships.</p>
                 <img src="img/chinook.db.png" alt="A database pre-processing.">
                 <h2 class="center">↓</h2>
-                <img src="img/chinook_updated.db.png" alt="A database post-processing.">
+                <img src="img/chinookRemapped.png" alt="A database post-processing.">
+            </div>
+            
+            <div class="left fadeDiv">
+                <p>This example is a slightly larger version of the example from my portfolio's main page. This shows the ability of Data Prometheus to determine relationships between multiple different tables, as well as more clearly showing the moonbuggy_users table as the source that the other RecordKey keys are referencing.</p>
+                <img src="img/smallUnmapped.png" alt="A database pre-processing.">
+                <h2 class="center">↓</h2>
+                <img src="img/smallMapped.png" alt="A database post-processing.">
             </div>
 
             <div class="left fadeDiv">
                 <p>An even larger example of the moonbuggy database, this is the database that we were originally given. The previous examples were modified to be clearer and easier to understand.</p>
-                <img src="img/moonbuggy.sqlite.png" alt="A database pre-processing.">
+                <img src="img/fullUnmapped.png" alt="A database pre-processing.">
                 <h2 class="center">↓</h2>
-                <img src="img/moonbuggy_updated.db.png" alt="A database post-processing.">
+                <img src="img/fullMapped.png" alt="A database post-processing.">
             </div>
         </div>
     </main>

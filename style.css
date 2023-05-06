@@ -294,3 +294,7 @@ footer {
     height: 75px;
     bottom: 0px;
 }
+
+footer p {
+    font-size: 12px;
+}
