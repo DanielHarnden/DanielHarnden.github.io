@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Daniel Harnden Portfolio</title>
+    <title>Portfolio - Daniel Harnden</title>
     <meta name="description" content="Daniel Harnden's Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/portfolio.jpg">
 
     <script src="base.js" type="text/javascript" defer></script>
 </head>
@@ -28,7 +29,6 @@
 
     <main>
         <div class="intro fadeDiv">
-            <!--<div class="portfolio-img-holder"><div class="portfolio-img"></div></div>-->
             <h2>Hey, my name is</h2>
             <h1>Daniel Harnden.</h1>
             <p>I'm an aspiring software engineer with a Bachelor's degree in Computer Science with a concentration in Data Science from Tennessee Technological University, awarded May 2023. I have also been awarded a GED and Associates degree from Florida Southwestern State College's Dual Enrollment program in May 2019, as well as the honor of Eagle Scout in November 2019.</p>
@@ -51,13 +51,13 @@
             <p>Data Prometheus then saves the newly generated database and returns a schema image of that new database. The program was written in Python and uses Docker containers of <a href="https://react.dev/" target="_blank">ReactJS</a> to host the Frontend and <a href="https://www.schemacrawler.com/index.html" target="_blank">SchemaCrawler</a> to crawl inputted databases and generate graph images.</p>
             <p>Below is a very simplified example of a database being joined. The first image is the database pre-processing. The tables share three keys, though there are no foreign key relationships between them, making the tables indepedent of each other. Post-processing, RecordKey key in the moonbuggy_users table is identified as a foreign key of RecordKey in past_volunteers.</p>
             <img src="img/tinyUnmapped.png" alt="A database pre-processing.">
-            <h2 class="center">↓</h2>
+            <h2 style="text-align: center;">↓</h2>
             <img src="img/tinyMapped.png" alt="A database post-processing.">
             <br>
             <p>Data Prometheus is not just limited to database files. Below are the functions and function calls of the four main Data Prometheus Python files. The order of function calls and the relationships present between each file are clearly defined.</p>
-            <img src="img/dp0505.png" alt="The layout of Data Prometheus as of May 5th, 2023.">
+            <img src="img/dp0516.png" alt="The layout of Data Prometheus as of May 16th, 2023.">
             <br>
-            <p>Currently, Data Prometheus only supports SQL, SQLite, and Python files as input. In the future, other programming and database languages are planned to be added.</p>
+            <p>Currently, Data Prometheus only supports SQLite, Python, SQL, Java, and CPP files as input. In the future, other programming and database languages are planned to be added.</p>
             <p>More examples of Data Prometheus processing be found <a href="dataPrometheus.html" rel="noreferrer">here</a>.</p>
             <p>The Data Prometheus repository can be found <a href="https://github.com/DanielHarnden/DataPrometheus" rel="noreferrer">here</a>.</p>
         </div>
@@ -83,12 +83,8 @@
             <p>I also like to do creative writing in my free time. The only public story right now is <a href="https://beantimes.github.io" target="_blank" rel="noreferrer">Memories of the Bean Times</a>, a story about monsters made of baked beans attacking medieval Europe. It's around 100,000 words and still ongoing. To make the story public, I created a website using HTML, CSS, and JavaScript, and am hosting it using GitHub Pages. You can find the source code <a href="https://github.com/BeanTimes/BeanTimes.github.io" target="_blank" rel="noreferrer">here</a>.</p>
         </div>
 
-    </main>
-
-    <footer>
-        <p>Website designed and Built by Daniel Harnden.</p>
-    </footer>
-
+    </main> 
+    
 </body>
 
 </html>

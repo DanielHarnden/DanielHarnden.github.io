@@ -3,50 +3,52 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Daniel Harnden - Data Prometheus</title>
+    <title>Data Prometheus - Daniel Harnden</title>
     <meta name="description" content="Further information regarding Data Prometheus">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/portfolio.jpg">
 
     <script src="base.js" type="text/javascript" defer></script>
 </head>
 
 <body>
+    
     <socials-component></socials-component>
     <email-component></email-component>
     <return-component to="dataPrometheus"></return-component>
 
     <main>
+
         <div class="fadeDiv">
-            <h1 class="center">Further Examples of Data Prometheus</h1>
+
+            <h1 style="text-align: center;">Further Examples of Data Prometheus</h1>
 
             <div class="left fadeDiv">
                 <p>This is an example of Data Prometheus attempting to re-map a database that already has relationships. The first image was generated using <a href="https://www.schemacrawler.com/" target="_blank">SchemaCrawler</a>, a database mapping tool that was used during the capstone phase of the project. After I began expanding Data Prometheus, I decided to move away from using SchemaCrawler to generate graph images.</p>
                 <p>Even at this basic stage, Data Prometheus is able to programatically and correctly identify 9 out of 11 relationships in chinook.db. Despite incorrectly identifying two relationships (Customers/SupportRepId -> Employees/EmployeeId and Employees/ReportsTo -> Employees/EmployeeId), the table structure is identical to a database with predefined relationships.</p>
                 <img src="img/chinook.db.png" alt="A database pre-processing.">
-                <h2 class="center">↓</h2>
+                <h2 style="text-align: center;">↓</h2>
                 <img src="img/chinookRemapped.png" alt="A database post-processing.">
             </div>
-            
+
             <div class="left fadeDiv">
                 <p>This example is a slightly larger version of the example from my portfolio's main page. This shows the ability of Data Prometheus to determine relationships between multiple different tables, as well as more clearly showing the moonbuggy_users table as the source that the other RecordKey keys are referencing.</p>
                 <img src="img/smallUnmapped.png" alt="A database pre-processing.">
-                <h2 class="center">↓</h2>
+                <h2 style="text-align: center;">↓</h2>
                 <img src="img/smallMapped.png" alt="A database post-processing.">
             </div>
 
             <div class="left fadeDiv">
                 <p>An even larger example of the moonbuggy database, this is the database that we were originally given. The previous examples were modified to be clearer and easier to understand.</p>
                 <img src="img/fullUnmapped.png" alt="A database pre-processing.">
-                <h2 class="center">↓</h2>
+                <h2 style="text-align: center;">↓</h2>
                 <img src="img/fullMapped.png" alt="A database post-processing.">
             </div>
-        </div>
-    </main>
 
-    <footer>
-        <p>Designed and Built by Daniel Harnden</p>
-    </footer>
+        </div>
+
+    </main>
 
 </body>
 
