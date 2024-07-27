@@ -57,7 +57,7 @@ class returnComponent extends HTMLElement {
         const to = this.getAttribute('to');
         this.innerHTML = `
         <div class="return">
-            <a class="return" href="https://danielharnden.github.io#${to}">Return to Main Page</a>
+            <a class="return" href="index.html#${to}">Return to Portfolio</a>
         </div>
         `;
     }

@@ -133,7 +133,6 @@ div.fadeDiv.fadeOut {
 div.intro {
     text-align: left;
     padding-top: 150px;
-    min-height: 100vh;
 }
 
 div.left,
@@ -145,7 +144,6 @@ div.right {
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, var(--main-back), var(--main-outline) 15%, var(--main-outline) 85%, var(--main-back));
     padding: 25px 0px 75px 0px;
-    min-height: 100vh;
 }
 div.left {text-align: left;}
 div.right{text-align: right;}
@@ -284,7 +282,6 @@ a.clicked {color: var(--main-text);}
 
 div.intro {
     text-align: left;
-    min-height: 100vh;
 }
 
 div.left,
@@ -297,7 +294,6 @@ div.right {
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, var(--main-back), var(--main-outline) 15%, var(--main-outline) 85%, var(--main-back));
     padding: 25px 0px 25px 0px;
-    min-height: 100vh;
 }
 
 

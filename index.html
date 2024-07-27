@@ -27,6 +27,7 @@
 
     <header>
         <ol>
+            <li><a href="#clippyCommando">Clippy Commando</a></li>
             <li><a href="#dataPrometheus">Data Prometheus</a></li>
             <li><a href="#rttcf">Real-Time Train Crowding Forecasting</a></li>
             <li><a href="#other">Additional Work</a></li>
@@ -49,35 +50,49 @@
         </div>
 
         <div id="tiles"></div>
+
+        <div class="left fadeDiv" id="clippyCommando">
+            <a href="clippyCommando.html"><h1>Clippy Commando</h1></a>
+            <p>An arcade top-down shooter where you play as a paper clip armed with heavy weaponry fighting hordes of other office supplies to the death. Go for a high score in Infinite Mode, or save the Clipenberg Empire from the threat of the Rulerian Alliance in Story Mode.</p>
+
+            <br>
+
+            <p>Clippy Commando is a video game developed by me, Daniel Harnden. Jess Grieger helped with art and Zoe Mantle helped with playtesting.</p>
+            <p>Further information, including trailers, screenshots, and a free demo, can be found on <a href="https://store.steampowered.com/">Steam</a>. Patch notes for the game can be found <a href="clippyCommando.html">here</a>. Clippy Commando started as a Game Jam project, with further details in <a href="#other">the additional work section</a> of this page.</p>
+        </div>
         
-        <div class="left fadeDiv" id="dataPrometheus">
-            <h1>Data Prometheus</h1>
+        <div class="right fadeDiv" id="dataPrometheus">
+            <a href="dataPrometheus.html" rel="noreferrer"><h1>Data Prometheus</h1></a>
             <p>An expanded version of my capstone project, Data Prometheus is an automatic database mapping and merging tool that has two main functions:</p>
                 <ul>
-                    <li>Map databases without primary and foreign key relations</li>
-                    <li>Combine two or more databases into a singular primary database</li>
+                    <li style="text-align: left;">Map databases without primary and foreign key relations</li>
+                    <li style="text-align: left;">Combine two or more databases into a singular primary database</li>
                 </ul>
 
             <br>
+
             <p>Data Prometheus then saves the newly generated database and returns a schema image of that new database. The original capstone project was written in Python and uses Docker containers of <a href="https://react.dev/" target="_blank">ReactJS</a> to host the Frontend and <a href="https://www.schemacrawler.com/index.html" target="_blank">SchemaCrawler</a> to crawl inputted databases and generate graph images. Since expanding the program after my capstone, Data Prometheus is now built entirely in Python.</p>
             <p>Below is a very simplified example of a database being joined. The first image is the database pre-processing. The tables share three keys, though there are no foreign key relationships between them, making the tables indepedent of each other. Post-processing, RecordKey key in the moonbuggy_users table is identified as a foreign key of RecordKey in past_volunteers.</p>
             <img src="img/tinyUnmapped.png" alt="A database pre-processing.">
             <h2 style="text-align: center;">↓</h2>
             <img src="img/tinyMapped.png" alt="A database post-processing.">
+
             <br>
+
             <p>Data Prometheus is not just limited to database files. Below are the functions and function calls of the four main Data Prometheus Python files. The order of function calls and the relationships present between each file are clearly defined.</p>
             <img src="img/dp0525.png" alt="The layout of Data Prometheus as of May 25th, 2023.">
+
             <br>
+
             <p>Currently, Data Prometheus only supports SQLite, Python, SQL, Java, and CPP files as input. In the future, other programming and database languages are planned to be added.</p>
             <p><a href="https://github.com/DanielHarnden/DataPrometheus" rel="noreferrer">The Data Prometheus repository can be found here.</a></p>
             <p><a href="https://github.com/DanielHarnden/DataPrometheus#readme" rel="noreferrer">Video examples can be found in Data Prometheus's README here.</a></p>
             <p><a href="dataPrometheus.html" rel="noreferrer">Further examples of Data Prometheus processing be found here.</a></p>
-            
         </div>
 
 
 
-        <div class="right fadeDiv" id="rttcf">
+        <div class="left fadeDiv" id="rttcf">
             <h1>Real-Time Train Crowding Forecast</h1>
             <p>A project for my Advanced Data Science class, Real-Time Train Crowding Forecasting uses historical data provided by SNCR-Transilien, a French transit company, to predict a given train's crowding factor, which is defined as the ratio of pasengers on a train relative to its total possible capacity.</p>
             <p>This was a group project between myself, Marc Ebersberger, and Shelby Smith. Our supervised machine learning algorithm uses the crowding factor of previous trains at the current station and the crowding factor of the current train at previous stations to predict train occupancy rates in real time.</p>
@@ -88,12 +103,12 @@
 
 
 
-        <div class="left fadeDiv" id="other">
+        <div class="right fadeDiv" id="other">
             <h1>Additional Work</h1>
             <p>I am an Eagle Scout who spent seven years in the Scouting program. During my time with the Scouts, I performed various leadership roles including project management, organizing and teaching children ages eight to sixteen, leading a group of eight scouts for three years, and assisting in hundreds of hours of community service projects.</p>
             <p>I like to make games in my free time using <a href="https://unity.com/" target="_blank" rel="noreferrer">Unity</a> and C#. Many of my game demos are either unfinished or under construction spanning various genres including 2D platformers, point and click visual novels, and first person shooters.</p>
-            <p>One of my public demos is <a href="https://danielharnden.github.io/ClippyCommando/index.html" target="_blank" rel="noreferrer">Clippy Commando</a>, a twin stick shooter made for itch.io's <a href="https://itch.io/jam/jame-gam-18/entries" target="_blank" rel="noreferrer">"Jame Gam #18"</a> game jam. You can view the source code <a href="https://github.com/DanielHarnden/ClippyCommando" target="_blank" rel="noreferrer">here</a>.</p>
-            <p>I also like to do creative writing in my free time. The only public story right now is <a href="https://beantimes.github.io" target="_blank" rel="noreferrer">Memories of the Bean Times</a>, a story about monsters made of baked beans attacking medieval Europe. It's around 100,000 words and still ongoing. To make the story public, I created a website using HTML, CSS, and JavaScript, and am hosting it using GitHub Pages. <a href="https://github.com/BeanTimes/BeanTimes.github.io" target="_blank" rel="noreferrer">You can find the source code here.</a></p>
+            <p>One of my public demos is <a href="https://github.com/DanielHarnden/ClippyCommandoOrigins/blob/main/index.html" target="_blank" rel="noreferrer">Clippy Commando Origins</a>, a twin stick shooter made for itch.io's <a href="https://itch.io/jam/jame-gam-18/entries" target="_blank" rel="noreferrer">"Jame Gam #18"</a> game jam. You can view the source code <a href="https://github.com/DanielHarnden/ClippyCommandoOrigins" target="_blank" rel="noreferrer">here</a>. I have been working on a full version of Clippy Commando, which can be found above.</p>
+            <p>I also like to do creative writing in my free time. I previously had my story <i>Memories of the Bean Times</i> publically hosted on GitHub pages, but decided to take the website down due to the frequent amount of edits making it difficult to keep the website updated. <a href="https://github.com/BeanTimes/BeanTimes.github.io" target="_blank" rel="noreferrer">The source code (and a previous version of the story, I guess, just not in easily readable webpage form) is available here.</a></p>
         </div>
 
     </main> 
