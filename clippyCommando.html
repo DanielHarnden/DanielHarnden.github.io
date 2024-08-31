@@ -51,24 +51,30 @@
             </div> -->
 
             <div class="left fadeDiv">
-                <h2 style="text-align: center;">Version 0.0.010 - 8/29/24</h2>
+                <h2 style="text-align: center;">Version 0.0.010 - 8/31/24</h2>
                 <h2 style="text-align: center;"><b>Accessibility and Bug Fixes</b></h2><br>
-                <p>Added a new accessibilty settings screen with various features and fixed some crashes and saving issues.</p>
+                <p>Added a new accessibility settings screen with various features and fixed some crashes and saving issues.</p>
                 
                 <br><h2><b>New Features</b></h2>
                 <ul>
-                    <li>Added link to the changelog, which is where you are now, hello!</li>
-                    <li>Added various accessibility options, including options to turn off screenshake, hitpauses, the debris surface, and vignettes.</li>
-                    <li>Rebalanced Infinite Mode. It now requires ~120% more XP to level up, and weapon upgrade prices were nerfed.</li>
+                    <li>Added link to the changelog, which is where you are now, hello! All major changes and bug fixes will be tracked here.</li>
+                    <li>Added various accessibility options, including options to turn off screen shake, hit pauses, the debris surface, and vignettes.</li>
+                    <li>Began implementing local multiplayer. Hopefully a functioning beta will be available for Version 0.0.011!</li>
+                </ul>
+
+                <br><h2><b>Balance Changes</b></h2>
+                <ul>
+                    <li>Gluers damage reduced from 10 to 5.</li>
+                    <li>Infinite Mode level ups now require ~120% more XP.</li>
+                    <li>Various Infinite Mode weapon upgrade prices were made more expensive.</li>
                 </ul>
 
                 <br><h2><b>Bug Fixes</b></h2>
-
                 <br>
                 <p>Saving and Loading</p>
                 <ul>
-                    <li>Fixed an error where some items without ammo (keys specifically) could crash the game when auto-saving.</li>
-                    <li>Fixed an error that caused save files to be deleted if the game was exited unnaturally before "officially" saving.</li>
+                    <li>Fixed an error where some items without ammo (the chapter 2 no cutscene cell key specifically for some reason) could crash the game when auto-saving.</li>
+                    <li>Fixed an error that caused save files to be deleted if the game was exited unnaturally before "officially" saving (before reaching the world map).</li>
                     <li>Temporary save files are now saved immediately after launching the game rather than after loading the appropriate save slot.</li>
                 </ul>
 
@@ -78,7 +84,15 @@
                     <li>Leaderboards now default to global rather than friends to make the game seem more active.</li>
                     <li>Fixed error that caused weekly challenges to be submitted to the map leaderboard rather than the weekly challenge leaderboard.</li>
                     <li>Locked levels now show their unlock chapter in the level select rather than "???".</li>
-                    <li>Infinite Mode no longer crashes after beating wave 26. Innovative.</li>
+                    <li>Infinite Mode no longer crashes after beating wave 26. Innovative for an infinite mode.</li>
+                </ul>
+
+                <br>
+                <p>Inventory</p>
+                <ul>
+                    <li>Fixed an error that caused assigning nothing (the weapon) to an empty inventory slot would crash the game.</li>
+                    <li>Fixed weapon swapping functionality; if a weapon is already in the player's inventory and they attempt to assign it somewhere else, it will now do that instead of doing nothing.</li>
+                    <li>Weapons should now correctly keep track of ammo, even when swapped or removed from the player's inventory.</li>
                 </ul>
 
                 <br>
@@ -92,6 +106,7 @@
                     <li>Fixed error that caused the "total teleports" stat to be incorrectly tracked.</li>
                     <li>Added "candles destroyed," "bushes entered," and "bushes destroyed" stats to the stats screen.</li>
                     <li>I forgot to add the period to the outlined damage number fonts, making numbers like "7.50" appear as "750". Oopsie.</li>
+                    <li>Fixed issues with the chapter 1 level node in the demo location.</li>
                     <li>The Steam button on the main menu now links to Clippy Commando's store page rather than Steam's main page.</li>
                 </ul>
             </div>
