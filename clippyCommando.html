@@ -58,8 +58,18 @@
                 <br><h2><b>New Features</b></h2>
                 <ul>
                     <li>Added link to the changelog, which is where you are now, hello! All major changes and bug fixes will be tracked here.</li>
-                    <li>Added various accessibility options, including options to turn off screen shake, hit pauses, the debris surface, and vignettes.</li>
-                    <li>Began implementing local multiplayer. Hopefully a functioning beta will be available for Version 0.0.011!</li>
+                    <li>Added various accessibility options, including:</li>
+                    <ul style="padding-left: 16px">
+                        <li>Reduce (and increase!) screen shake.</li>
+                        <li>Toggle dyslexic-friendly fonts.</li>
+                        <li>Toggle hit pauses.</li>
+                        <li>Toggle the debris surface (weapon shells and casings, enemy corpses).</li>
+                        <li>Toggle vignettes.</li>
+                    </ul>
+                    <li>Began implementing local multiplayer. Hopefully a functioning beta will be available for Version 0.0.011! This may cause input related bugs, since the entire input backend was updated to account for multiple players, but hopefully not!</li>
+                    <li>Rulers now eject casings when shooting their pistols.</li>
+                    <li>Added the ability to change scroll wheel sensitivity for swapping weapons.</li>
+                    <li>Added "candles destroyed," "bushes entered," and "bushes destroyed" stats to the stats screen.</li>
                 </ul>
 
                 <br><h2><b>Balance Changes</b></h2>
@@ -70,6 +80,16 @@
                 </ul>
 
                 <br><h2><b>Bug Fixes</b></h2>
+
+                <br>
+                <p>Controllers</p>
+                <ul>
+                    <li>Fixed various errors resulting in incorrect controller input.</li>
+                    <li>Fixed an error that caused controller input to not be picked up if the controller was connected after the game started.</li>
+                    <li>Updated controller configuration in Steamworks to match current input methods.</li>
+                    <li>Updated the default controller button layout for the full game and the demo.</li>
+                </ul>
+
                 <br>
                 <p>Saving and Loading</p>
                 <ul>
@@ -84,7 +104,14 @@
                     <li>Leaderboards now default to global rather than friends to make the game seem more active.</li>
                     <li>Fixed error that caused weekly challenges to be submitted to the map leaderboard rather than the weekly challenge leaderboard.</li>
                     <li>Locked levels now show their unlock chapter in the level select rather than "???".</li>
-                    <li>Infinite Mode no longer crashes after beating wave 26. Innovative for an infinite mode.</li>
+                    <li>Infinite Mode no longer crashes after beating wave 26. Innovative for an "infinite" mode, I know.</li>
+                </ul>
+
+                <br>
+                <p>Story Mode</p>
+                <ul>
+                    <li>Fixed an error that caused the pacifist medal in chapter 1 to only be obtainable with cutscenes on.</li>
+                    <li>Updated the narrator's "voice" to sound less gross and disgusting.</li>
                 </ul>
 
                 <br>
@@ -98,16 +125,18 @@
                 <br>
                 <p>Everything Else</p>
                 <ul>
+                    <li>Compressed some audio, resulting in a ~30% reduction in game file size.</li>
                     <li>Optimized bushes considerably.</li>
                     <li>For some reason, the Infinite Mode modifier objects and buttons were active even when not in the menu, and they used a considerable amount of resources to do nothing and be dumb.</li>
-                    <li>Rulers now eject casings when shooting their pistols.</li>
                     <li>Fixed an error that caused the game to crash when a taper couldn't figure out what it was taping.</li>
                     <li>Fixed pistol and revolver bullets having wonky hitboxes.</li>
                     <li>Fixed error that caused the "total teleports" stat to be incorrectly tracked.</li>
-                    <li>Added "candles destroyed," "bushes entered," and "bushes destroyed" stats to the stats screen.</li>
                     <li>I forgot to add the period to the outlined damage number fonts, making numbers like "7.50" appear as "750". Oopsie.</li>
                     <li>Fixed issues with the chapter 1 level node in the demo location.</li>
                     <li>The Steam button on the main menu now links to Clippy Commando's store page rather than Steam's main page.</li>
+                    <li>Damage number visuals were tweaked slightly.</li>
+                    <li>Fonts are now credited.</li>
+                    <li>Made minor visual changes to the settings screen.</li>
                 </ul>
             </div>
 
