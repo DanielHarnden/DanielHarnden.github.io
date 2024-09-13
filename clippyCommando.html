@@ -13,7 +13,7 @@
     </script>
     
     <meta charset="utf-8">
-    <title>Clippy Commando Patchnotes</title>
+    <title>Clippy Commando Patch Notes</title>
     <meta name="description" content="Patch notes for the hit 2024 video game Clippy Commando.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -51,33 +51,65 @@
             </div> -->
 
             <div class="left fadeDiv">
-                <h2 style="text-align: center;">Version 0.0.010 - 8/31/24</h2>
-                <h2 style="text-align: center;"><b>Accessibility and Bug Fixes</b></h2><br>
-                <p>Added a new accessibility settings screen with various features and fixed some crashes and saving issues.</p>
+                <h2 style="text-align: center;">Version 0.0.010 - 9/13/24</h2>
+                <h2 style="text-align: center;"><b>Demo Pre-Alpha Update</b></h2>
+                <h3 style="text-align: center;">Optimization, GUI Improvements, and Accessibility Features</h3><br><br><br>
+
+                <p>We've been working hard to prepare Clippy Commando for the October Next Fest. The highlights include:</p>
+
+                <ul>
+                    <li>The damage and input systems have been overhauled, which should help performance on lower end systems and improve scalability for future additions to the game.</li>
+                    <li>Various accessibility features.</li>
+                    <li>An overhaul of various GUI elements, and a rework of the dialogue GUI from scratch. All text elements had to be updated, too, since I switched from using GameMaker's built in text drawing functions to <a href="https://www.jujuadams.com/Scribble/#/latest/">Juju Adams' Scribble library</a>.</li>
+                </ul>
+
+
+
+                <br><h2><b>The Future</b></h2>
+
+                <p style="font-size: 16px">We've been working on implementing local multiplayer! This feature isn't in a state we're ready to release yet, but should be finished for the next update. Using Steam's Remote Play Together framework, this functionally allows for online multiplayer while we work on implementing a dedicated online system.</p>
                 
+                <p style="font-size: 16px">Bug fixes and optimizations will be a main focus as we polish the demo for Next Fest. We want to give all players a stable and comfortable experience.</p>
+
+                <p style="font-size: 16px">We plan on updating the demo with some additional content, mainly additional bonus levels, modifiers, and unlockable cosmetics. However, as the demo creeps towards its "finished" state, we are transitioning to finishing implementation of content that will only be available in the full game, like the 9 new weapons we added in this update that don't appear in the demo.</p>
+
+                <p style="font-size: 16px">Current progress towards game completion is around 10%.</p>
+
+
                 <br><h2><b>New Features</b></h2>
                 <ul>
-                    <li>Added link to the changelog, which is where you are now, hello! All major changes and bug fixes will be tracked here.</li>
+                    <li>Added "heavy bullets" and "timed items" modifiers.</li>
                     <li>Added various accessibility options, including:</li>
-                    <ul style="padding-left: 16px">
-                        <li>Reduce (and increase!) screen shake.</li>
+                    <ul style="padding-left: 16px"></ul>
                         <li>Toggle dyslexic-friendly fonts.</li>
+                        <li>Reduce (and increase!) screen shake.</li>
                         <li>Toggle hit pauses.</li>
                         <li>Toggle the debris surface (weapon shells and casings, enemy corpses).</li>
                         <li>Toggle vignettes.</li>
+                        <li>Slow the game down slightly without impacting score or audio.</li>
                     </ul>
-                    <li>Began implementing local multiplayer. Hopefully a functioning beta will be available for Version 0.0.011! This may cause input related bugs, since the entire input backend was updated to account for multiple players, but hopefully not!</li>
-                    <li>Rulers now eject casings when shooting their pistols.</li>
                     <li>Added the ability to change scroll wheel sensitivity for swapping weapons.</li>
-                    <li>Added "candles destroyed," "bushes entered," and "bushes destroyed" stats to the stats screen.</li>
+                    <li>Improved most of the GUI, featuring a brand new dialogue GUI!</li> 
+                    <li>Added "ally deaths," "damage dealt to allies," "times shot", "candles destroyed," "bushes entered," "bushes destroyed," and "total environmental damage dealt" stats to the stats screen.</li>
+                    <li>Rulers now eject unique casings when shooting their pistols.</li>
+                    <li>The War Profiteer now has his own enemy bits and damage audio.</li>
+                    <li>Added new wall variants and updated all wall sprites.</li>
+                    <li>Added link to the changelog, which is where you are now, hello! All major changes and bug fixes will be tracked here.</li>
                 </ul>
+
+
 
                 <br><h2><b>Balance Changes</b></h2>
                 <ul>
                     <li>Gluers damage reduced from 10 to 5.</li>
                     <li>Infinite Mode level ups now require ~120% more XP.</li>
                     <li>Various Infinite Mode weapon upgrade prices were made more expensive.</li>
+                    <li>All enemies (excluding the gluer, gluer stick, and corrector fluid) are now impacted by glue (and corrector fluid, if the modifier is enabled) stickiness like the player. All enemies are now impacted by bushes.</li>
+                    <li>Bushes now reduce bullet pierce by 0.25 rather than 0.</li>
+                    <li>Damaging environmental objects like bushes and crates now adds to the score.</li>
                 </ul>
+
+
 
                 <br><h2><b>Bug Fixes</b></h2>
 
@@ -90,6 +122,8 @@
                     <li>Updated the default controller button layout for the full game and the demo.</li>
                 </ul>
 
+
+
                 <br>
                 <p>Saving and Loading</p>
                 <ul>
@@ -98,21 +132,28 @@
                     <li>Temporary save files are now saved immediately after launching the game rather than after loading the appropriate save slot.</li>
                 </ul>
 
+
+
                 <br>
                 <p>Infinite Mode</p>
                 <ul>
                     <li>Leaderboards now default to global rather than friends to make the game seem more active.</li>
-                    <li>Fixed error that caused weekly challenges to be submitted to the map leaderboard rather than the weekly challenge leaderboard.</li>
+                    <li>Fixed error that caused weekly challenges to be submitted to the leaderboard of the respective map rather than the weekly challenge leaderboard.</li>
                     <li>Locked levels now show their unlock chapter in the level select rather than "???".</li>
                     <li>Infinite Mode no longer crashes after beating wave 26. Innovative for an "infinite" mode, I know.</li>
                 </ul>
+
+
 
                 <br>
                 <p>Story Mode</p>
                 <ul>
                     <li>Fixed an error that caused the pacifist medal in chapter 1 to only be obtainable with cutscenes on.</li>
                     <li>Updated the narrator's "voice" to sound less gross and disgusting.</li>
+                    <li>Fixed a bug where pausing in Bonus Level 1 would cause the enemies to stop shooting. I have literally 0 clue what was causing the issue, but it's fixed now.</li>
                 </ul>
+
+
 
                 <br>
                 <p>Inventory</p>
@@ -122,23 +163,47 @@
                     <li>Weapons should now correctly keep track of ammo, even when swapped or removed from the player's inventory.</li>
                 </ul>
 
+
+
+                <br>
+                <p>Civilians</p>
+                <ul>
+                    <li>Civilians can now come in multiple races to diversify your war crimes.</li>
+                    <li>Civilians now stop completely when the player comes near them, but only if they're in front of their current escape route.</li>
+                    <li>Civilians now despawn even when the player can see them to prevent farming money and war crimes.</li>
+                    <li>Children now have unique bits.</li>
+                </ul>
+
+
+
                 <br>
                 <p>Everything Else</p>
                 <ul>
                     <li>Compressed some audio, resulting in a ~30% reduction in game file size.</li>
+                    <li>Rewrote damage system to improve optimization and scalability.</li>
                     <li>Optimized bushes considerably.</li>
+                    <li>Fixed various issues with the camera.</li>
                     <li>For some reason, the Infinite Mode modifier objects and buttons were active even when not in the menu, and they used a considerable amount of resources to do nothing and be dumb.</li>
                     <li>Fixed an error that caused the game to crash when a taper couldn't figure out what it was taping.</li>
                     <li>Fixed pistol and revolver bullets having wonky hitboxes.</li>
                     <li>Fixed error that caused the "total teleports" stat to be incorrectly tracked.</li>
+                    <li>Fixed error that caused the "times run into enemy" stat to increment when taking any damage, regardless of source.</li>
+                    <li>Fixed error that caused ambience particles (clouds, wind, leaves) to continue to move while the game was paused (noticeable in hit pauses and during level ups).</li>
                     <li>I forgot to add the period to the outlined damage number fonts, making numbers like "7.50" appear as "750". Oopsie.</li>
                     <li>Fixed issues with the chapter 1 level node in the demo location.</li>
                     <li>The Steam button on the main menu now links to Clippy Commando's store page rather than Steam's main page.</li>
                     <li>Damage number visuals were tweaked slightly.</li>
                     <li>Fonts are now credited.</li>
-                    <li>Made minor visual changes to the settings screen.</li>
+                    <li>Text displays for time played are no longer modulo'd by 24.</li>
+                    <li>The Quillshire Prison warden now has his own unique sprites and is also not asleep and also also doesn't have a hat ever now.</li>
+                    <li>Fixed an error that caused the player's eyes and hat to draw over their weapon. This has been in the game for months and no one ever noticed it.</li>
+                    <li>Changed enemy depths to be from the bottom of their sprite to the center.</li>
                 </ul>
             </div>
+
+
+
+
 
             <div class="left fadeDiv">
                 <h2 style="text-align: center;">Version 0.0.009 - 8/26/24</h2>
