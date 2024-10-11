@@ -23,36 +23,284 @@
 </head>
 
 <body>
-    
-    <!--<socials-component></socials-component>
-    <email-component></email-component>
-    <return-component to="clippyCommando"></return-component> -->
-
     <main>
-
         <div class="fadeDiv">
-
             <h1 style="text-align: center;">Clippy Commando<br>Patch Notes</h1>
 
-            <!-- <div class="left fadeDiv">
-                <h2 style="text-align: center;">(Future) Version 0.1.000 - ???</h2>
-                <h2 style="text-align: center;">Demo: Next Fest Edition</h2><br>
-                <p>We've polished up the demo for Next Fest in an attempt to make people like it more, which I know is impossible, but hey, we can try.</p>
-                
+
+
+            <div class="left fadeDiv">
+                <h2 style="text-align: center;">Version 0.0.012 - 10/11/24</h2>
+                <h2 style="text-align: center;"><b>Bods and Mods Update</b></h2>
+                <h3 style="text-align: center;">Dozens of new modifiers and cosmetics!</h3><br><br><br>
+
+                <p>We've been working on adding modifiers, cosmetics, and balancing challenges to provide a better gameplay experience for Infinite Mode.</p>
+
+                <br><h2><b>The Future</b></h2>
+
+                <p style="font-size: 16px">With Next Fest imminent, we're going to switch primarily to bug fixes as (hopefully) an influx of new players report just how broken and unoptimized the game really is.</p>
+
                 <br><h2><b>New Features</b></h2>
                 <ul>
-                    <li>Under Construction</li>
+                    <li>Enemies can wear hats again!</li>
+                    <li>Challenges now have their own leaderboards that are independent of maps. For the purpose of the online leaderboards, scores that are negative due to a challenge will have their absolute value uploaded to the leaderboard. This score is ONLY uploaded to the challenge leaderboard.</li>
+                    <li>Added 12 new modifiers.</li>
+                    <li>Added 1 new challenge.</li>
+                    <li>Added 13 new models.</li>
+                    <li>Added 32 new hats.</li>
+                    <li>Added 6 new mouths.</li>
+                    <li>Bullets are now visible when behind other objects.</li>
+                </ul>
+
+                <br><h2><b>Balance Changes</b></h2>
+                <ul>
+                    <li>Reduced staple remover base health from 50 to 45.</li>
+                    <li>Edited staple remover hitbox.</li>
+                    <li>Reduced ruler base health from 80 to 75.</li>
+                    <li>Edited ruler bullet hitbox.</li>
+                    <li>Reduced gluer base health from 60 to 45.</li>
+                    <li>Reduced gluer deceleration from 0.015 to 0.010.</li>
+                    <li>Edited gluer hitbox.</li>
+                    <li>Edited staple hitboxes.</li>
+                    <li>Edited corrector fluid hitbox.</li>
+                    <li>Increased penciler base health from 70 to 75.</li>
+                    <li>Reduced penciler bottom / top base health from 35 to 20.</li>
+                    <li>Edited penciler hitbox.</li>
+                    <li>Increased gluer stick base health from 50 to 55.</li>
+                    <li>Slightly nerfed bushes (movement speed reduction changed from 1.3x to 1.25x)</li>
+                    <li>Enemy bullets now despawn after 2.5 minutes, if they manage to live that long (this is mostly for the bouncy bullets modifier).</li>
+                    <li>Increased XP requirements for leveling up.</li>
+                    <li>Decreased critical hit level up reward number from (2 * current level) to (current level).</li>
+                </ul>
+
+                <br><h2><b>Modifier Changes</b></h2>
+                <ul>
+                    <li>Reorganized the modifier customization screen to be less stupid and arbitrary.</li>
+                    <li>Added "player bullet speed" modifier.</li>
+                    <li>Added "bush impact" modifier.</li>
+                    <li>Added "goo puddle impact" modifier (not in demo).</li>
+                    <li>Added "randomize level up rewards" modifier.</li>
+                    <li>Added "bouncy bullets" modifier.</li>
+                    <li>Added "ally of the crates" modifier.</li>
+                    <li>Added "enemy of the crates" modifier.</li>
+                    <li>Added "explosive crates only" modifier.</li>
+                    <li>Added "recursive crates" modifier.</li>
+                    <li>Added "random weapon upgrades" modifier.</li>
+                    <li>Added "super level up" modifier.</li>
+                    <li>Added "can't stop" modifier.</li>
+
+                    <li>Edited Bullet Explosions and Super Bullet Explosions:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Enemies killed by explosions caused by the player's weapons now count as player kills.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Damage is now equal to the damage of the weapon that shot the bullet, rather than 10.</li>
+                </ul>
+
+                <br><h2><b>Challenge Changes</b></h2>
+                <ul>
+                    <li>Removed the following challenges from the demo:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Bee Challenge.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Poor Challenge.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Slippery Challenge.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Turtle Challenge.</li>
+                    
+                    <br><li>Easy Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced stamina from 360 to 300.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced damage modifier from 1.5x to 1.25x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased damage reduction modifier from 0.5x to 0.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced money and XP drop rates from 2.5x to 1.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced health drop rate from 25% to 10%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased enemy health from 0.75x to 1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced bush impact from 1.25x to 1.1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced goo puddle impact from 2x to 1.5x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Friendly fire is now disabled.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Level up rewards are now randomized.</li>
+
+                    <br><li>Hard Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "bullet time" ability.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased health from 75 to 80.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased stamina from 120 to 150.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased sprint damage reduction from 1x to 0.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased player damage reduction from 1.5x to 1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased player bullet size from 0.75x to 1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased player bullet speed from 1x to 0.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased money and XP drop rates from 0.75x to 1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased health drop rate from 5% to 7.5%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased ammo crate drop rate from 0% to 2.5%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased critical hit chance from 0% to 1%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased enemy movement speed from 1.25x to 1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased enemy critical hit chance from 10% to 5%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased bush impact from 1.25x to 1.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased goo puddle impact from 2x to 2.5x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "explode explosions" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "bullet explosions" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "random level up rewards" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "explosive crates only" modifier.</li>
+
+                    <br><li>Impossible Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased health from 50 to 65.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased stamina from 60 to 120.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased damage from 0.5x to 1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased player damage reduction from 2x to 1.25x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced player bullet speed from 1x to 0.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased player bullet size from 0.5x to 0.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased acceleration from 0.5 to 0.4.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased acceleration from 0.7 to 0.5.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased pickup radius and speed from 0.5x to 0.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased health drop rate from 0% to 5%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased enemy movement speed from 1.5x to 1.25x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased enemy critical hit chance from 25% to 10%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Change environmental impacts from maximum to double their defaults.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "one weapon" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "random teleport" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "super bullet explosions" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "stroke" modifier.</li>
+
+                    <br><li>Baby Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Player bullet speed is now maxed out.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Friendly fire is now disabled.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Bush and goo puddle impact reduced to 1.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Level up rewards are now randomized.</li>
+                        
+                    <br><li>Bullet Hell Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "jump" ability.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced player bullet speed from 1x to 0.75x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased ammo crate drop chance from 5% to 10%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced enemy bullet speed from 1.25x to 1x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced enemy bullet size from 3x to 2.5x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "bouncy bullets" modifier.</li>
+                    
+                    <br><li>Added the Cratetastic Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Crates spawn when enemies are killed (Ally of the Crates).</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Destroying crates spawns enemies (Enemy of the Crates).</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Destroying crates spawns crates (Recursive Crates).</li>
+                    
+                    <br><li>One Shot, One Kill:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Enemies now have 1 health at all times (some enemies could spawn with enough health to tank a hit or two).</li>
+                        
+                    <br><li>Oops, All Explosions Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "explosive crates only" modifier.</li>
+
+                    
+                    <br><li>Literally Unplayable Challenge:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased health from 25 to 50.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased stamina from 60 to 90.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Decreased sprint damage reduction from maximum to minimum.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased player damage reduction from 1x to 1.5x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced bullet speed from 1x to 0.5x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased pickup radius and speed from 0x to 0.25x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased money and XP drop rates from 0x to 0.5x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced enemy health from maximum to 2x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced enemy bullet speed from maximum to 2x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced enemy bullet size from maximum to 2x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced enemy movement speed from maximum to 1.5x.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Reduced enemy critical hit chance from 100% to 40%.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Increased bush and goo puddle impact to maximum.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added ability to upgrade weapons.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "weapon upgrade randomizer" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "mirror input" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "enemy of the crates" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "explosive crates only" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "timed items" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "random teleportation" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "can't stop" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added "bouncy bullets" modifier.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed "on hit boogie woogie" modifier.</li>
+                </ul>
+
+                <br><h2><b>Cosmetic Changes</b></h2>
+                <ul>
+                    <li>Model changes:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Grassy Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added City Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Science Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Baby Blue Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Easy Light Green Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Normal Green Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Hard Yellow Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Impossible Orange Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Bee Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Hellish Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Crate Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Reticle Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Explosive Clippy.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Story Clippy.</li>
+
+                    <br><li>Hat changes:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">I Clock CC Hat => Party Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Clippy Heart Eyes Hat => Tiny Top Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Small Clippy Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Thumb Tack Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Cowboy Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">#2 Baseball Cap => #2 Pencil Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Banana Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Shotgun Shell Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Ghillie Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Pocket Clip Horns.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Scissor Handle Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Purple Beanie.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">I " Rulers Hat => Ruler Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Staple Remover Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Gluer Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Staple Crown.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Corrector Fluid Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Penciler Pencil Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Gluer Stick Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Tape Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Removed The Douglas.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Forest Camo Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Warden Fedora.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Trapper Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Ink Stained Boater.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Prairie Camo Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Business Bowler.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Poop Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Tundra Camo Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Baby Bonnet.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Hellish Horns.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Crate Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Sniper Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Nuke Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Jailbird Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Civilian Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Mascot Ears.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">I Heart Inkwell Cap => Inky Cap.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">I Ink Bottle Inkwell Cap => Ink Bottle Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Hundred Gallon Hat.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Measureton! Hat.</li>
+
+                    <br><li>Mouth changes:</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Edited Smirk.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Fang Mouth.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Staple Frown.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Corrector Fluid Frown.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added V Mouth.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Gluey Frown.</li>
+                        <li style="list-style-type: none; padding-left: 16px;">Added Tape Frown.</li>
                 </ul>
 
                 <br><h2><b>Bug Fixes</b></h2>
                 <ul>
-                    <li>Under Construction</li>
+                    <li>Fixed error where negative numbers may have been displayed with a negative sign immediately before a comma (-,100)</li>
+                    <li>Fixed error that caused bullets to not be destroyed when breaking crates.</li>
+                    <li>Improved efficiency of spawning items like money and XP; instead of spawning 9 of an item if it is worth 9, the game will spawn 1 with a value of 9.</li>
+                    <li>Added current score option to Infinite Mode HUD text setting (used for when in challenges and the score is replaced by the name of the challenge).</li>
+                    <li>Fixed error that caused taper targeting priority to switch from dead enemies to the player.</li>
+                    <li>Enemies now push themselves out of walls, if they somehow get inside of a wall.</li>
+                    <li>Fixed error that caused the no ammo notification to remain while in the shop.</li>
+                    <li>Edited key sprite.</li>
+                    <li>Fixed error where the warden's microphone audio would play even when the server was destroyed in chapter 2.</li>
+                    <li>Edit hitboxes in Western Ruleria, Quillshire Prison, The Secluded Cabin, and Inkwell Bridge to prevent clipping out of bounds with excessive movement speed.</li>
+                    <li>Fixed error where gluer stick trails wouldn't spawn often enough when the game speed was too low.</li>
+                    <li>Fixed error that caused some random Clippies to be created (and in some cases not destroyed) when they didn't have to be.</li>
+                    <li>Fixed inconsistent depth for thrown pickup items.</li>
+                    <li>Fixed various stats not being tracked or being tracked incorrectly.</li>
+                    <li>Fixed revived gluers not using their revived sprites.</li>
                 </ul>
-            </div> -->
+                <br><br>
+            </div>
+
+
 
             <div class="left fadeDiv">
-            
-            </div>
                 <h2 style="text-align: center;">Version 0.0.011 - 9/27/24</h2>
                 <h2 style="text-align: center;"><b>Local Multiplayer Update</b></h2>
                 <h3 style="text-align: center;">Commit crimes with up to 4 people!</h3><br><br><br>
