@@ -40,7 +40,7 @@ class emailComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div class="email">
-            <a class="email" href="mailto:dpharnden42@tntech.edu">dpharnden42@tntech.edu</a>
+            <a class="email" href="mailto:danielharndengames@gmail.com">danielharndengames@gmail.com</a>
         </div>
         `;
     }
