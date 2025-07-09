@@ -1,0 +1,17 @@
+:root > *
+{
+  --md-primary-fg-color: #061040;
+  --md-primary-bg-color: #F0F1F4;
+}
+
+.md-grid
+{
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 80rem;
+}
+
+.md-sidebar--primary
+{
+  width: 400px;
+}

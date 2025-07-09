@@ -1,0 +1,60 @@
+site_name: Daniel Harnden
+
+extra_css:
+- stylesheets/extra.css
+
+site_url: https://danielharnden.github.io
+theme:
+  name: material
+  logo: images/icon.png
+  favicon: images/icon.png
+
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to Dark Mode
+
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to Light Mode
+
+  font:
+    text: Noto Sans
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.expand
+    - navigation.footer
+  
+nav:
+  - Home:
+    - index.md
+  - Clippy Commando Patch Notes:
+    - Latest Update:
+      - ClippyCommando/latest.md
+    - Pre-Release:
+      - ClippyCommando/latest.md
+
+
+extra:
+  generator: false
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/danielharnden
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/daniel-harnden-77745421b
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@Beanmeister12
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/danielharnden.bsky.social
+
+
+  analytics:
+    provider: google
+    property: G-FP2VLGCTTM
