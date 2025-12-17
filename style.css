@@ -1,0 +1,132 @@
+/* General CSS */
+:root { --animation-time: -1s; }
+html { height: 100%; margin: 0; }
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+p {
+    font-family: "Zain", sans-serif;
+    font-size: 1.25rem;
+}
+
+
+/* Background and Stars */
+#background {
+    background: #060219;
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    animation: star-float 60s ease infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes star-float {
+    0%, 100% { transform: scale(0.5) translateY(4px) rotate(-22.5deg); opacity: 0.75; }
+    50%      { transform: scale(1.5) translateY(-4px) rotate(22.5deg); opacity: 0.1; }
+}
+
+
+
+/* Background Div */
+.background-div {
+    font-family: "Zain", sans-serif;
+    padding: 2rem 3rem;
+    background: #fff;
+    text-align: center;
+    z-index: 1;
+    max-width: 70%;
+    height: 100%;
+
+    box-shadow: 0 0 10rem #1E0A7F;
+    animation: pulse-glow 10s ease-in-out infinite;
+}
+
+.background-div-round {
+    border-radius: 16px;
+    height: auto;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0rem #180866; }
+    50%      { box-shadow: 0 0 10rem #12064C; }
+}
+
+@keyframes rotate-index-background-div {
+    0%, 100% { rotate: -1deg; }
+    50%      { rotate: 1deg;  }
+}
+
+
+
+/* Index */
+.index-background-div { animation: rotate-index-background-div 15s ease var(--animation-time) infinite; }
+
+.index-background-div h1 {
+    margin: 1rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #111;
+}
+
+.index-link-div {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 1rem;
+}
+
+.index-link-div i {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #111;
+}
+
+.index-link-div a {
+    display: flex;
+    font-weight: 800;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #060219;
+    font-size: 1.2rem;
+
+    animation: rotate-index-link-div 10s ease-in-out var(--animation-time) infinite;
+    transition: transform 0.25s ease;
+}
+
+@keyframes rotate-index-link-div {
+    0%, 100% { rotate: -5deg; }
+    50%      { rotate: 5deg;  }
+}
+
+.index-link-div a:hover { transform: scale(1.2); }
+.index-link-div a:active { transform: scale(0.9); }
+.index-link-div a:not(:hover) { transform: scale(1); }
+
+
+
+/* Projects */
+.flex-parent {
+    display: flex;
+}
+
+.flex-child {
+    display: flex;
+    flex: 1;
+    height: 315.2px;
+    padding: 16px;
+    text-align: left;
+    align-items: center;
+}
